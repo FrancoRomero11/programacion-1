@@ -10,5 +10,6 @@ function calcular(){
 function mostrar_resultado(){
     //invocamos a la funcion y recibmos una respuesta
     const respuesta = calcular()
+    //
     alert(respuesta)
 }
