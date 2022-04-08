@@ -2,7 +2,7 @@
 function mostrar(){
     //declaramos una variable
     let numero = 15
-    //se i,prime en la consola del navegador
+    //se imprime en la consola del navegador
     console.log(numero)
 }
 
