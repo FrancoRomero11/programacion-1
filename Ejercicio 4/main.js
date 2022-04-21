@@ -7,7 +7,7 @@ function calcular_area_cir(n1){
 //se calcula el area de circunferencia 
     const resultado = Math.PI*calculo
 
-//se comparte larespuesta-resultado
+//se comparte la respuesta-resultado
     return resultado 
 }
 
@@ -20,7 +20,7 @@ function mostrar_area(){
 //estamos ejecutando la funcion y a la vez estamos enviando el radio 
     const respuesta = calcular_area_cir(num)
     
-    //muestra el resultado
+    //muestra el resultado-respuesta
     alert(respuesta)
 
 }

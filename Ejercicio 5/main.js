@@ -1,8 +1,10 @@
 function calcular_raiz(n1,n2,n3){
 
-const calculo = -n2 + SQRT(Math.pow(n2,2)-4*n1*n3)
+const parte1 = Math.pow (n2,2) - (4*n1*n3)
 
-const resultado = 2*n1/calculo
+const parte2 = -n2 - SQRT (parte1) 
+
+const resultado = 2*n1/parte2 
 
 return resultado
 }
