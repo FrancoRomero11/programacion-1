@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Televisores</title>
+    <link rel="stylesheet" href="./bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-5">
+                <input type="text" name="tamaño" id="tamaño" class="form-control m-3" placeholder="tamaño del televisor">
+                <input type="text" name="marca" id="marca" class="form-control m-3" placeholder="marca del televisor" >
+                <input type="text" name="modelo" id="modelo" class="form-control m-3" placeholder="modelo del televisor">
+                <input type="text" name="resolucion" id="resolucion" class="form-control m-3" placeholder="resolucion del televisor">
+                <input type="text" name="estado" id="estado" class="form-control m-3" placeholder="estado del televisor">
+                <button class="btn btn-success" onclick="ingresarTelevisor()">Ingresar televisor</button>
+            </div>
+
+            <div class="col-7">
+                <div id="demo">
+                </div>
+            </div>
+            <button onclick="mostrarTelevisores()">Motrar Televisores</button>
+            <ul id="ul"></ul>
+        </div>
+    </div>
+    <script src="./televisores.js"></script>
+</body>
+</html>

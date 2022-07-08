@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <title>Ejemplo Javascript!</title>
+</head>
+
+<body>
+    <div class="container overflow-hidden">
+        <div class="row gy-5">
+          <div class="col-6">
+            <div class="p-3 border bg-light">
+                <button type="button" class="btn btn-primary" onclick="doscifras()">Generar 20 numeros aleatorios hasta 2 cifras</button>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="p-3 border bg-light">Numero Mayor</div>
+          </div>
+          <div class="col-3">
+            <div class="p-3 border bg-light" id="nummayor">0</div>
+          </div>
+          <div class="col-6">
+            <div class="p-3 border bg-light">
+                <button type="button" class="btn btn-primary" onclick="trescifras()">Generar 20 numeros aleatorios hasta 3 cifras</button>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="p-3 border bg-light">Numero menor</div>
+          </div>
+          <div class="col-3">
+            <div class="p-3 border bg-light" id="nummenor">0</div>
+          </div>
+          <div class="col-6">
+            <div class="p-3 border bg-light">
+                <ul class="list-group" id="lista1">
+                   
+              </ul>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="p-3 border bg-light">Promedio</div>
+          </div>
+          <div class="col-3">
+            <div class="p-3 border bg-light" id="promedio">0</div>
+          </div>
+          
+        </div>
+      </div>
+  
+    <script>
+        function doscifras(){
+            var numeromayor=0
+            var numeromenor=999
+            var sumatotal=0
+            var promedio=0
+            for(i=1;i<=20;i++){            
+                var numaleatorio=parseInt(Math.random()*100)
+                sumatotal=sumatotal+numaleatorio
+                promedio=sumatotal/i
+                if (numaleatorio>numeromayor){
+                    numeromayor=numaleatorio
+                }
+                if (numaleatorio<numeromenor){
+                    numeromenor=numaleatorio
+                }
+                // modificar la lista
+                const lista = document.getElementById("lista1");
+                const li = document.createElement("li");
+                li.textContent =numaleatorio
+                li.className="list-group-item list-group-item-dark"
+                lista.appendChild(li);
+                //modificar valores
+                document.getElementById("promedio").textContent=promedio
+                document.getElementById("nummayor").textContent=numeromayor
+                document.getElementById("nummenor").textContent=numeromenor
+            }
+        }
+        function trescifras(){
+
+        }
+        
+        function sumador(num, tipo) {
+
+            let total = parseInt(document.getElementById("totalizador").textContent)
+            total = total + num
+            //console.log("Acciono el boton" + num + " total " + total)
+            document.getElementById("totalizador").textContent = total
+            
+            // elemento donde vamos a incorporar los <li>
+            const lista = document.getElementById("lista-dinamica");
+            // Creamos el <li>
+            const li = document.createElement("li");
+            // Agregamos texto al <li>
+            li.textContent = tipo + " Valor " + num;
+          
+            //li.className="list-group-item list-group-item-dark"
+            // Finalmente incorporamos al <ul>
+            lista.appendChild(li);          
+    
+          }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+
+</html>
